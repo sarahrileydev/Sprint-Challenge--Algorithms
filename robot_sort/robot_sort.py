@@ -97,16 +97,19 @@ class SortingRobot:
         Sort the robot's list.
         """
         # Fill this out
-        self.swap_item()
-        if len(self._list) == 1:
-            return self._list
-        for i in range(0, len(self._list)):
-            for j in range(i + 1, len(self._list)):
-                self.compare_item()
-                
-                
-        return self._list
-
+        if self.light_is_on() is False:
+            while self.can_move_right():
+                self.swap_item()
+                print(f"This is the first item: {self._item}")
+                self.compare_item() == 1
+                self.swap_item()
+                self.move_left()
+                self.swap_item()
+                self.move_right()
+                self.swap_item()
+                print(f"This is the second item: {self._item}")
+                break
+        
             
         
 
