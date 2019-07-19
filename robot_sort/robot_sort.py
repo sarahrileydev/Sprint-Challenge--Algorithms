@@ -97,7 +97,18 @@ class SortingRobot:
         Sort the robot's list.
         """
         # Fill this out
-        pass
+        self.swap_item()
+        if len(self._list) == 1:
+            return self._list
+        for i in range(0, len(self._list)):
+            for j in range(i + 1, len(self._list)):
+                self.compare_item()
+                
+                
+        return self._list
+
+            
+        
 
 
 if __name__ == "__main__":
